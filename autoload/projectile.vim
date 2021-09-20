@@ -22,6 +22,11 @@ function! projectile#SwitchProjects() abort
         \ '',
         \ 'customlist,projectile#GetProjectsName'
         \ )
+  redraw
 
-  execute 'e ' . l:choosed
+  if empty(l:choosed)
+    return
+  endif
+
+  execute 'tabnew ' . l:choosed
 endfunction
