@@ -3,3 +3,5 @@ if exists('g:loaded_projectile')
 endif
 
 let g:loaded_projectile = 1
+
+command! ProjectileSwitch call projectile#SwitchProjects()
